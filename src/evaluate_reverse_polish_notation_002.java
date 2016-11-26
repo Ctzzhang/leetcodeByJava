@@ -1,4 +1,4 @@
-package org.ctzzhang;
+
 
 import java.util.Stack;
 
@@ -9,45 +9,43 @@ public class evaluate_reverse_polish_notation_002 {
 	public class Solution {
 		public int evalRPN(String[] tokens) {
 			int num = 0;
-
 			Stack<Integer> s = new Stack<Integer>();
-
 			int len = tokens.length;
 			for (int i = 0; i < len; i++) {
-				if (tokens[i] == "+") {
-					int first=s.pop();
-					int second=s.pop();
-					int sum=first+second;
+				if (tokens[i].equals("+")) {
+					int first = s.pop();
+					int second = s.pop();
+					int sum = first + second;
 					s.add(sum);
 
-				} else if (tokens[i] == "-") {
-					int first=s.pop();
-					int second=s.pop();
-					int sum=second-first;
+				} else if (tokens[i].equals("-")) {
+					int first = s.pop();
+					int second = s.pop();
+					int sum = second - first;
 					s.add(sum);
 
-				} else if (tokens[i] == "*") {
-					int first=s.pop();
-					int second=s.pop();
-					int sum=first*second;
+				} else if (tokens[i].equals("*")) {
+					int first = s.pop();
+					int second = s.pop();
+					int sum = first * second;
 					s.add(sum);
 
-				} else if (tokens[i] == "/") {
-					int first=s.pop();
-					int second=s.pop();
-					if(second==0){
+				} else if (tokens[i].equals("/")) {
+					int first = s.pop();
+					int second = s.pop();
+					if (second == 0) {
 						s.add(second);
-					}else{
-						int m=(int)second/first;
+					} else {
+						int m = (int) second / first;
 						s.add(m);
-					
+
 					}
 
 				} else {
 					s.add(Integer.parseInt(tokens[i]));
 				}
 			}
-			num=s.peek();
+			num = s.peek();
 			return num;
 		}
 	}

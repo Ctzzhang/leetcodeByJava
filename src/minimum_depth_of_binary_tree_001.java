@@ -1,4 +1,4 @@
-package org.ctzzhang;
+
 
 public class minimum_depth_of_binary_tree_001 {
 	public class Solution {
