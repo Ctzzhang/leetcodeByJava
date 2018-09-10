@@ -45,6 +45,7 @@ public class evaluate_reverse_polish_notation_002 {
 					s.add(Integer.parseInt(tokens[i]));
 				}
 			}
+			
 			num = s.peek();
 			return num;
 		}
