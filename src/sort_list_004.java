@@ -58,7 +58,7 @@ public class sort_list_004 {
         }
         return mid;
     }
-      class ListNode {
+ class ListNode {
       int val;
      ListNode next;
      ListNode(int x) {
