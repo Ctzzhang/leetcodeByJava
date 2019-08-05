@@ -1,3 +1,4 @@
+package leetcodeByJava;
 
 
 public class minimum_depth_of_binary_tree_001 {

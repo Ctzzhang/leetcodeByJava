@@ -1,4 +1,4 @@
-package PACKAGE_NAME;
+package leetcodeByJava;
 
 public class words_ladder {
 }
