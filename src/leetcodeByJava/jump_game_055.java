@@ -4,18 +4,34 @@
  */
 package leetcodeByJava;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
-
 /**
  * TODO
  * @author tzzhang
  * @version create on 2019Äê8ÔÂ6ÈÕ
  */
 public class jump_game_055 {
+	   public boolean canJump(int[] nums) {
+	        int f = nums[0];
+	        int len = 0;
+	        for (int i = 1; i<=f; i++) {
+	        	len = len + i;
+	        	getlen(nums, i, len); 
+	        }
+			return false;
+	    }
 
+	/**
+	 * @param nums 
+	 * @param i
+	 * @param len
+	 */
+	private void getlen(int[] nums, int j, int len) {
+		int a = nums[len];
+		for (int i = 1; i<=a; i++) {
+			
+		}
+		
+	}
 	
 	
 	
